@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 /* ******************************************************************
  ALTERNATING BIT AND GO-BACK-N NETWORK EMULATOR: VERSION 1.1  J.F.Kurose
@@ -35,16 +36,49 @@ struct pkt {
     };
 
 /********* STUDENTS WRITE THE NEXT SEVEN ROUTINES *********/
-#define  NACK             0
-#define  ACK              1
+#define  NACK           0
+#define  ACK            1
+#define  Aside          0
+#define  Bside          1
 
 int Aseqnum;
 int Bseqnum;
+struct pkt AlastPkt;
+struct pkt BlastPkt;
+
+
+
+/***************************************
+ * helper funtions
+ */
+static int 
+get_checksum_val(struct pkt packet)
+{
+    int sum = 0;
+    
+    sum += packet.seqnum;
+    sum += packet.acknum;
+    for (int i = 0; i < 20; i++) {
+        sum += packet.payload[i];
+    }
+
+    return sum;
+}
+
+static bool 
+check_checksum(struct pkt packet)
+{
+    int sum = get_checksum_val(packet);
+
+    return (sum == packet.checksum);
+}
+
+
 
 
 /* called from layer 5, passed the data to be sent to other side */
-struct pkt
-A_output(struct msg message)
+A_output(message)
+  struct msg message;
 {
     struct pkt sendingPkt;
 
@@ -52,12 +86,15 @@ A_output(struct msg message)
     sendingPkt.seqnum = Aseqnum;
     sendingPkt.acknum = NACK;
 
-    sendingPkt.payload = message.data;
+    strncpy(sendingPkt.payload, message.data, 20);
 
-    sendingPkt.checksum = checksum(sendingPkt);
+    sendingPkt.checksum = get_checksum_val(sendingPkt);
 
-    return sendingPkt;
+    AlastPkt = sendingPkt;
+    // starttimer(Aside, );
+    tolayer3(Aside, sendingPkt);
 }
+
 
 B_output(message)  /* need be completed only for extra credit */
   struct msg message;
@@ -69,21 +106,27 @@ B_output(message)  /* need be completed only for extra credit */
 A_input(packet)
   struct pkt packet;
 {
-    while (packet.acknum) {
+    if (packet.acknum == ACK) {
+        struct msg receivedMsg;
 
+        if (check_checksum(packet)) {
+            tolayer5(Aside, receivedMsg);
+        }
     }
 }
 
 /* called when A's timer goes off */
 A_timerinterrupt()
 {
-
+    //starttimer
+    tolayer3(Aside, AlastPkt);
 }  
 
 /* the following routine will be called once (only) before any other */
 /* entity A routines are called. You can use it to do any initialization */
 A_init()
 {
+    Aseqnum = 0;
 }
 
 
@@ -93,34 +136,23 @@ A_init()
 B_input(packet)
   struct pkt packet;
 {
+    if (check_checksum(packet)) {
+        packet.acknum = ACK;
+        tolayer3(Bside, packet);
+    }
 }
 
 /* called when B's timer goes off */
 B_timerinterrupt()
 {
+
 }
 
 /* the following rouytine will be called once (only) before any other */
 /* entity B routines are called. You can use it to do any initialization */
 B_init()
 {
-}
-
-/***************************************
- * helper funtions
- */
-static int 
-checksum(struct pkt packet)
-{
-    int sum = 0;
-    
-    sum += packet.seqnum;
-    sum += packet.acknum;
-    for (i = 0; i < 20; i++) {
-        sum += packet.payload[i];
-    }
-
-    return sum;
+    Bseqnum = 0;
 }
 
 
@@ -283,7 +315,7 @@ init()                         /* initialize the simulator */
     printf("It is likely that random number generation on your machine\n" ); 
     printf("is different from what this emulator expects.  Please take\n");
     printf("a look at the routine jimsrand() in the emulator code. Sorry. \n");
-    exit();
+    exit(0);
     }
 
    ntolayer3 = 0;
