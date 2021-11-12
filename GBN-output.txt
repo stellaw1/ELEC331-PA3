@@ -1,0 +1,322 @@
+stella@stell-surfacebook:/mnt/c/Users/stell/OneDrive - UBC/Courses/ELEC331/Assignments/PS3/PA3$ ./a.out
+-----  Stop and Wait Network Simulator Version 1.1 --------
+
+Enter the number of messages to simulate: 20
+Enter  packet loss probability [enter 0.0 for no loss]:0.2
+Enter packet corruption probability [0.0 for no corruption]:0.2
+Enter average time between messages from sender's layer5 [ > 0.0]:10
+Enter TRACE:2
+
+EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
+
+EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 28.705740,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 37.392609,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 38.057533,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 38.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+
+EVENT time: 44.369377,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 45.847797,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 48.527962,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 48.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+
+EVENT time: 52.146210,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 56.787369,  type: 1, fromlayer5  entity: 0
+          TOLAYER3: packet being corrupted
+Warning: attempt to start a timer that is already started
+
+EVENT time: 57.724827,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 58.175858,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 58.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 61.053696,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 62.239460,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 64.023384,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 64.045799,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 68.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 69.861351,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 71.736542,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 73.042931,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 74.079056,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 74.798607,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 78.460373,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 78.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 79.694405,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 80.119598,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 84.086868,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 86.261223,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 87.371155,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 88.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+
+EVENT time: 92.988823,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 93.934845,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 96.005859,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 96.680084,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 97.152237,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 98.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+
+EVENT time: 99.715477,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 100.759918,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 106.002533,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 106.744019,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 108.705742,  type: 0, timerinterrupt   entity: 0
+
+EVENT time: 108.998917,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 110.118721,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 114.605957,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 118.705742,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 118.737625,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 121.011658,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 123.008652,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 123.790237,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 124.094139,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 126.599358,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 128.149597,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 128.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 131.280075,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 132.858627,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 133.143005,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 137.573990,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 138.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 141.681747,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 143.265610,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being corrupted
+
+EVENT time: 144.997192,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 145.112808,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 148.512741,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 148.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+
+EVENT time: 148.797470,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 157.226257,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 157.456482,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 158.605515,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 158.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 160.493439,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 162.039398,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 166.174026,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 168.211700,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 168.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 170.347733,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 175.521286,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 177.949738,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 178.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+
+EVENT time: 181.255920,  type: 2, fromlayer3  entity: 0
+packet received out of order
+
+EVENT time: 181.322540,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 181.453674,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 187.080627,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+          TOLAYER3: packet being lost
+
+EVENT time: 188.165039,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 188.677109,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 188.705750,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+
+EVENT time: 192.395325,  type: 2, fromlayer3  entity: 1
+packet received at B is corrupted or out of order
+
+EVENT time: 193.754807,  type: 1, fromlayer5  entity: 0
+Warning: attempt to start a timer that is already started
+
+EVENT time: 194.244247,  type: 2, fromlayer3  entity: 0
+ Simulator terminated at time 194.244247
+ after sending 20 msgs from layer5
